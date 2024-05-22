@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:skin_first/presentation/welcome/welcome_screen.dart';
 
 void main() {
@@ -11,17 +12,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Skin First',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blueAccent,
           background: Colors.white,
           primary: const Color(0xff2260FF),
         ),
-        textTheme: const TextTheme(
-            titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            bodyMedium: TextStyle(fontSize: 16),
-            bodySmall: TextStyle(fontSize: 14)),
+        textTheme: TextTheme(
+            titleLarge: GoogleFonts.leagueSpartan(
+              fontSize: 48,
+              fontWeight: FontWeight.w100,
+              color: const Color(0xff2260FF),
+            ),
+            titleMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            titleSmall: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Color(0xff2260FF),
+            ),
+            bodyMedium: const TextStyle(fontSize: 16),
+            bodySmall: const TextStyle(fontSize: 14)),
         useMaterial3: true,
       ),
       home: const WelcomeScreen(),

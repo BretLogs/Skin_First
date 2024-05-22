@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/buttons/log_in_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -8,22 +9,33 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(28),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Image.asset('assets/images/welcome_icon.png'),
-              const Text('Skin First'),
-              const Text('Dermatology Center'),
-              const SizedBox(height: 24),
-              Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodySmall,
+              Column(
+                children: <Widget>[
+                  Image.asset('assets/images/welcome_icon.png'),
+                  const SizedBox(height: 12),
+                  Text(
+                    'Skin First',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  Text(
+                    'Dermatology Center',
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
+                ],
               ),
               Column(
                 children: <Widget>[
-                  ElevatedButton(onPressed: () {}, child: const Text('Log in!')),
+                  Text(
+                    'Discover personalized skincare and expert treatments with us. Your radiant skin journey begins here.',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  const SizedBox(height: 24),
+                  const LogInButton(),
                   ElevatedButton(onPressed: () {}, child: const Text('Sign Up!')),
                 ],
               ),
