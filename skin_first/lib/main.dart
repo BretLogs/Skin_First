@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:skin_first/presentation/splash/splash_screen.dart';
 import 'package:skin_first/presentation/welcome/welcome_screen.dart';
 
 void main() {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
             bodySmall: const TextStyle(fontSize: 14)),
         useMaterial3: true,
       ),
-      home: const WelcomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
