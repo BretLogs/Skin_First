@@ -13,7 +13,7 @@ class LogInButton extends StatelessWidget {
           padding: MaterialStatePropertyAll(EdgeInsets.fromLTRB(100, 8, 100, 8))),
       child: Text(
         'Log In!',
-        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.white),
+        style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
       ),
     );
   }
