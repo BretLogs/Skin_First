@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/buttons/log_in_button.dart';
+import 'package:skin_first/presentation/buttons/sign_in_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,8 +37,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   const LogInButton(),
-                  const SizedBox(height: 12),
-                  ElevatedButton(onPressed: () {}, child: const Text('Sign Up!')),
+                  const SignInButton(),
                 ],
               ),
             ],
