@@ -36,6 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   const LogInButton(),
+                  const SizedBox(height: 12),
                   ElevatedButton(onPressed: () {}, child: const Text('Sign Up!')),
                 ],
               ),

@@ -7,7 +7,14 @@ class LogInButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {},
-      child: const Text('Log In!'),
+      style: const ButtonStyle(
+          backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
+          foregroundColor: MaterialStatePropertyAll(Colors.white),
+          padding: MaterialStatePropertyAll(EdgeInsets.fromLTRB(100, 8, 100, 8))),
+      child: Text(
+        'Log In!',
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.white),
+      ),
     );
   }
 }
