@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:skin_first/presentation/splash/splash_screen.dart';
-import 'package:skin_first/presentation/welcome/welcome_screen.dart';
+import 'package:skin_first/presentation/authentications/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +21,11 @@ class MyApp extends StatelessWidget {
           background: Colors.white,
           primary: const Color(0xff2260FF),
         ),
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(
+            color: Color(0xff2260FF),
+          ),
+        ),
         textTheme: TextTheme(
             titleLarge: GoogleFonts.leagueSpartan(
               fontSize: 48,
@@ -37,7 +42,7 @@ class MyApp extends StatelessWidget {
             bodySmall: const TextStyle(fontSize: 14)),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
