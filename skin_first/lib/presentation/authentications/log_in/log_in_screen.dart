@@ -31,25 +31,53 @@ class LogInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  const TextField(
+                  Text(
+                    'email or mobile number',
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  TextField(
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email or Mobile Number',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: const BorderSide(
+                          width: 0,
+                          style: BorderStyle.solid,
+                        ),
+                      ),
+                      prefixIcon: const Icon(Icons.email_outlined),
+                      // labelText: 'Email or Mobile Number',
+                      hintText: 'johndoe@email.com',
+                      hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black45),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      const TextField(
+                      Text(
+                        'password',
+                        style: Theme.of(context).textTheme.labelMedium,
+                        textAlign: TextAlign.left,
+                      ),
+                      TextField(
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Password',
-                          suffixIcon: Icon(Icons.visibility),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: const BorderSide(
+                              width: 0,
+                              style: BorderStyle.solid,
+                            ),
+                          ),
+                          prefixIcon: const Icon(Icons.lock),
+                          hintText: 'Password',
+                          hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black45),
+                          suffixIcon: const Icon(Icons.visibility),
                         ),
                         obscureText: true,
                       ),
-                      TextButton(onPressed: () {}, child: const Text('Forget Password')),
+                      // TextButton(onPressed: () {}, child: const Text('Forget Password?')),
                     ],
                   )
                 ],
