@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -61,44 +62,78 @@ class LogInScreen extends StatelessWidget {
                         style: Theme.of(context).textTheme.labelMedium,
                         textAlign: TextAlign.left,
                       ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: <Widget>[
                       TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(
-                              width: 0,
-                              style: BorderStyle.solid,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide: const BorderSide(
+                                width: 0,
+                                style: BorderStyle.solid,
+                              ),
                             ),
+                            prefixIcon: const Icon(Icons.lock),
+                            hintText: 'Password',
+                            hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black45),
+                            suffixIcon: const Icon(Icons.visibility),
                           ),
-                          prefixIcon: const Icon(Icons.lock),
-                          hintText: 'Password',
-                          hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black45),
-                          suffixIcon: const Icon(Icons.visibility),
-                        ),
-                        obscureText: true,
-                      ),
-                      // TextButton(onPressed: () {}, child: const Text('Forget Password?')),
+                          obscureText: true),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Forget Password?',
+                            style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.blueAccent, fontStyle: FontStyle.italic),
+                          )),
                     ],
                   )
                 ],
               ),
               Column(
                 children: <Widget>[
-                  ElevatedButton(onPressed: () {}, child: const Text('Log in')),
-                  const Text('or sign up with'),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: const ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
+                        foregroundColor: MaterialStatePropertyAll(Colors.white),
+                        padding: MaterialStatePropertyAll(EdgeInsets.fromLTRB(50, 8, 50, 8))),
+                    child: Text(
+                      'Log in',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Text(
+                    'or sign up with',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(color: const Color.fromRGBO(0, 0, 0, 0.5)),
+                  ),
+                  const SizedBox(height: 24),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.signal_cellular_4_bar_outlined)),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.ac_unit_outlined)),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.add_a_photo)),
+                      // IconButton(onPressed: () {}, icon: Icon(Icons.)),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.facebook_outlined)),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.markunread)),
                     ],
                   ),
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text("Don't have an account?"),
-                  TextButton(onPressed: () {}, child: const Text('Sign Up!')),
+                  Text(
+                    "Don't have an account?",
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Sign Up!',
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.blueAccent),
+                      )),
                 ],
               )
             ],
