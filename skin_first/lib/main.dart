@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:skin_first/presentation/authentications/welcome_screen.dart';
+import 'package:skin_first/presentation/authentications_page/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());

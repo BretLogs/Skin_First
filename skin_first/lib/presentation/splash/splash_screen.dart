@@ -15,11 +15,11 @@ class SplashScreen extends StatelessWidget {
             Image.asset('assets/images/splash_icon.png'),
             const SizedBox(height: 12),
             Text(
-              'Skin First',
+              'Sys Go',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),
             ),
             Text(
-              'Dermatology Center',
+              'Dental Services',
               style: Theme.of(context).textTheme.titleSmall?.copyWith(color: Colors.white),
             ),
           ],

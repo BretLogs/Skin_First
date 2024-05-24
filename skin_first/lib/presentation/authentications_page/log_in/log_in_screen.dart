@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/authentications/sign_up/sign_up_screen.dart';
+import 'package:skin_first/presentation/authentications_page/sign_up/sign_up_screen.dart';
 import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
 import 'package:skin_first/presentation/buttons/text_button_primary.dart';
 import 'package:skin_first/presentation/home_page/home_page.dart';
@@ -31,7 +31,7 @@ class LogInScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(color: const Color(0xff2260FF)),
               ),
               Text(
-                'Welcome to Radiant Dermatology Center, where your journey to healthy, beautiful skin begins.',
+                'Welcome to Sys Go Dental Clinic, where your oral health and dazzling smile are our top priorities.',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               const SizedBox(height: 40),

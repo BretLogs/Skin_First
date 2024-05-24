@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/authentications/log_in/log_in_screen.dart';
+import 'package:skin_first/presentation/authentications_page/log_in/log_in_screen.dart';
 import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
 import 'package:skin_first/presentation/buttons/text_button_primary.dart';
 import 'package:skin_first/presentation/splash/splash_screen.dart';
