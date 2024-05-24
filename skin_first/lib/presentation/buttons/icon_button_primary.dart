@@ -8,9 +8,14 @@ class IconButtonPrimary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return IconButton(
       onPressed: onPressed,
-      child: Icon(icon),
+      style: const ButtonStyle(
+        backgroundColor: MaterialStatePropertyAll(
+          Color(0xffCAD6FF),
+        ),
+      ),
+      icon: Icon(icon),
     );
   }
 }

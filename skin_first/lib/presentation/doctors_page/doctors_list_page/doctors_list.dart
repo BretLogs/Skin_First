@@ -25,18 +25,24 @@ class DoctorsList extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              const Text('Sort By'),
-              ElevatedButtonSecondary(
-                onPressed: () {},
-                textString: 'A - Z',
-              ),
-              IconButtonPrimary(
-                onPressed: () {},
-                icon: Icons.abc_outlined,
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Sort By',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                const SizedBox(width: 12),
+                ElevatedButtonSecondary(onPressed: () {}, textString: 'A - Z'),
+                IconButtonPrimary(onPressed: () {}, icon: Icons.star_border_outlined),
+                IconButtonPrimary(onPressed: () {}, icon: Icons.favorite_border_outlined),
+                IconButtonPrimary(onPressed: () {}, icon: Icons.female_outlined),
+                IconButtonPrimary(onPressed: () {}, icon: Icons.male_outlined),
+              ],
+            ),
           )
         ],
       ),
