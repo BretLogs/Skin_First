@@ -11,15 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color mainColor = const Color(0xff2260FF);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Skin First',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.blueAccent, background: Colors.white, primary: const Color(0xff2260FF), onPrimary: const Color(0xff2260FF)),
-        appBarTheme: const AppBarTheme(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent, background: Colors.white, primary: mainColor, onPrimary: mainColor),
+        appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(
-            color: Color(0xff2260FF),
+            color: mainColor,
           ),
         ),
         iconButtonTheme: const IconButtonThemeData(
@@ -28,19 +28,25 @@ class MyApp extends StatelessWidget {
           ),
         ),
         textTheme: TextTheme(
-            titleLarge: GoogleFonts.leagueSpartan(
-              fontSize: 48,
-              fontWeight: FontWeight.w100,
-              color: const Color(0xff2260FF),
-            ),
-            titleMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            titleSmall: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-              color: Color(0xff2260FF),
-            ),
-            bodyMedium: const TextStyle(fontSize: 16),
-            bodySmall: const TextStyle(fontSize: 14)),
+          titleLarge: GoogleFonts.leagueSpartan(
+            fontSize: 48,
+            fontWeight: FontWeight.w100,
+            color: mainColor,
+          ),
+          titleMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          titleSmall: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: mainColor,
+          ),
+          bodyMedium: const TextStyle(fontSize: 16),
+          bodySmall: const TextStyle(fontSize: 14),
+          displaySmall: TextStyle(
+            fontSize: 12,
+            color: mainColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         useMaterial3: true,
       ),
       home: const WelcomeScreen(),
