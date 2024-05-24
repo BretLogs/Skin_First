@@ -20,7 +20,7 @@ class HomeSearchNav extends StatelessWidget {
         ),
       ]),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 8),
         child: Column(
           children: <Widget>[
             Row(

@@ -2,12 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeDentistCard extends StatelessWidget {
-  const HomeDentistCard({super.key});
+  const HomeDentistCard({super.key, required this.imageUrl});
+
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 12),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
         child: Container(
@@ -20,8 +22,8 @@ class HomeDentistCard extends StatelessWidget {
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(100),
-                    child: Image.asset(
-                      'assets/images/profile_pic.jpg',
+                    child: Image.network(
+                      imageUrl,
                       height: 100,
                       width: 100,
                       fit: BoxFit.cover,
