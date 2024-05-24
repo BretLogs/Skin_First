@@ -16,10 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Skin First',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blueAccent,
-          background: Colors.white,
-          primary: const Color(0xff2260FF),
-        ),
+            seedColor: Colors.blueAccent, background: Colors.white, primary: const Color(0xff2260FF), onPrimary: const Color(0xff2260FF)),
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(
             color: Color(0xff2260FF),

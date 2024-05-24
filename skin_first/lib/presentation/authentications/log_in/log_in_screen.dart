@@ -98,7 +98,12 @@ class LogInScreen extends StatelessWidget {
                 children: <Widget>[
                   ElevatedButtonPrimary(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const HomePage()));
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => const HomePage(),
+                        ),
+                      );
                     },
                     textString: 'Log in',
                   ),
