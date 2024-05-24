@@ -5,7 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_app_bar_widget.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_calendar_day_widget.dart';
+import 'package:skin_first/presentation/home_page/widgets/home_dentist_card.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_search_nav.dart';
+import 'package:skin_first/presentation/home_page/widgets/home_week_calendar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,22 +24,8 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             const HomeSearchNav(),
             const SizedBox(height: 16),
-            Container(
-              color: const Color(0xffCAD6FF),
-              child: const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  children: <Widget>[
-                    HomeCalendarDayWidget(isTrue: true, day: '9'),
-                    HomeCalendarDayWidget(isTrue: false, day: '10'),
-                    HomeCalendarDayWidget(isTrue: false, day: '11'),
-                    HomeCalendarDayWidget(isTrue: true, day: '12'),
-                    HomeCalendarDayWidget(isTrue: true, day: '13'),
-                    HomeCalendarDayWidget(isTrue: false, day: '14'),
-                  ],
-                ),
-              ),
-            )
+            const HomeWeekCalendar(),
+            for (int i = 0; i < 5; i++) const HomeDentistCard(),
           ],
         ),
       ),
