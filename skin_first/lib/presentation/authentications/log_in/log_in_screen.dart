@@ -77,7 +77,7 @@ class LogInScreen extends StatelessWidget {
                               ),
                             ),
                             prefixIcon: const Icon(Icons.lock),
-                            hintText: 'Password',
+                            hintText: '•••••••••',
                             hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black45),
                             suffixIcon: const Icon(Icons.visibility),
                           ),

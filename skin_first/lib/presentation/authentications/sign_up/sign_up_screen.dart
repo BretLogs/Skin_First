@@ -139,6 +139,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       hintText: '•••••••••',
                       prefixIcon: const Icon(Icons.lock),
                       hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black45),
+                      suffixIcon: const Icon(Icons.visibility),
                     ),
                     obscureText: true,
                   ),

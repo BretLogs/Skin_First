@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/authentications/log_in/log_in_screen.dart';
 
-class LogInButton extends StatelessWidget {
-  const LogInButton({super.key});
+class ElevatedButtonPrimary extends StatelessWidget {
+  const ElevatedButtonPrimary({
+    super.key,
+    required this.onPressed,
+    required this.textString,
+  });
+
+  final Function() onPressed;
+  final String textString;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (BuildContext context) => const LogInScreen()),
-        );
+        onPressed;
       },
       style: const ButtonStyle(
           backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
           foregroundColor: MaterialStatePropertyAll(Colors.white),
           padding: MaterialStatePropertyAll(EdgeInsets.fromLTRB(100, 8, 100, 8))),
       child: Text(
-        'Log In!',
+        textString,
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
       ),
     );

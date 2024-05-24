@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/buttons/log_in_button.dart';
-import 'package:skin_first/presentation/buttons/sign_in_button.dart';
+import 'package:skin_first/presentation/authentications/log_in/log_in_screen.dart';
+import 'package:skin_first/presentation/authentications/sign_up/sign_up_screen.dart';
+import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
+import 'package:skin_first/presentation/buttons/text_button_primary.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -37,8 +39,24 @@ class WelcomeScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                     const SizedBox(height: 24),
-                    const LogInButton(),
-                    const SignInButton(),
+                    ElevatedButtonPrimary(
+                      textString: 'Log In!',
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => const LogInScreen()),
+                        );
+                      },
+                    ),
+                    TextButtonPrimary(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => const SignUpScreen()),
+                        );
+                      },
+                      textString: "I Don't have an account",
+                    ),
                   ],
                 ),
               ],
