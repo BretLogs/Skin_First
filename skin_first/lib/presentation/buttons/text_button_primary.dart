@@ -9,9 +9,7 @@ class TextButtonPrimary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        onPressed;
-      },
+      onPressed: onPressed,
       child: Text(
         textString,
         style: Theme.of(context).textTheme.bodySmall?.copyWith(fontStyle: FontStyle.italic, color: Colors.blueAccent),

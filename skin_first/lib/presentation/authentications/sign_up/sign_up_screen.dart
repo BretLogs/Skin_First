@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/authentications/log_in/log_in_screen.dart';
+import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
+import 'package:skin_first/presentation/buttons/text_button_primary.dart';
+import 'package:skin_first/presentation/splash/splash_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -42,6 +46,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           padding: const EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -174,16 +179,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(height: 12),
               Column(
                 children: <Widget>[
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: const ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
-                        foregroundColor: MaterialStatePropertyAll(Colors.white),
-                        padding: MaterialStatePropertyAll(EdgeInsets.fromLTRB(50, 8, 50, 8))),
-                    child: Text(
-                      'Sign up!',
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
-                    ),
+                  ElevatedButtonPrimary(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const SplashScreen()));
+                    },
+                    textString: 'Sign up!',
                   ),
                   const SizedBox(height: 12),
                   Text(
@@ -206,12 +206,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         'Already have an Account?',
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
-                      TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Log in!',
-                            style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.blueAccent),
-                          )),
+                      TextButtonPrimary(
+                        onPressed: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const LogInScreen()));
+                        },
+                        textString: 'Log in!',
+                      )
                     ],
                   )
                 ],

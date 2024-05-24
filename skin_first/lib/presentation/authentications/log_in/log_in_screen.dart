@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/authentications/sign_up/sign_up_screen.dart';
+import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
+import 'package:skin_first/presentation/buttons/text_button_primary.dart';
+import 'package:skin_first/presentation/home_page/home_page.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
@@ -82,28 +86,21 @@ class LogInScreen extends StatelessWidget {
                             suffixIcon: const Icon(Icons.visibility),
                           ),
                           obscureText: true),
-                      TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Forget Password?',
-                            style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.blueAccent, fontStyle: FontStyle.italic),
-                          )),
+                      TextButtonPrimary(
+                        onPressed: () {},
+                        textString: 'Forget Password',
+                      )
                     ],
                   )
                 ],
               ),
               Column(
                 children: <Widget>[
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: const ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
-                        foregroundColor: MaterialStatePropertyAll(Colors.white),
-                        padding: MaterialStatePropertyAll(EdgeInsets.fromLTRB(50, 8, 50, 8))),
-                    child: Text(
-                      'Log in',
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
-                    ),
+                  ElevatedButtonPrimary(
+                    onPressed: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const HomePage()));
+                    },
+                    textString: 'Log in',
                   ),
                   const SizedBox(height: 24),
                   Text(
@@ -128,12 +125,12 @@ class LogInScreen extends StatelessWidget {
                     "Don't have an account?",
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Sign Up!',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.blueAccent),
-                      )),
+                  TextButtonPrimary(
+                    onPressed: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const SignUpScreen()));
+                    },
+                    textString: 'Sign Up!',
+                  )
                 ],
               )
             ],
