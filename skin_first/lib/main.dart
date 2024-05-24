@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
             color: mainColor,
           ),
         ),
-        iconButtonTheme: const IconButtonThemeData(
+        iconButtonTheme: IconButtonThemeData(
           style: ButtonStyle(
-            iconColor: MaterialStatePropertyAll(Colors.white),
+            iconColor: MaterialStatePropertyAll(mainColor),
           ),
         ),
         textTheme: TextTheme(

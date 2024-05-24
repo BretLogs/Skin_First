@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/doctors_page/doctors_list_page/doctors_list.dart';
 
 class HomeSearchNav extends StatelessWidget {
   const HomeSearchNav({super.key});
@@ -29,7 +30,12 @@ class HomeSearchNav extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => const DoctorsList()),
+                        );
+                      },
                       icon: Icon(
                         Icons.medical_information_outlined,
                         color: Theme.of(context).colorScheme.primary,
