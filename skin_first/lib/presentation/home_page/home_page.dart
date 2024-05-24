@@ -19,15 +19,21 @@ class HomePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const HomeAppBarWidget(),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            const HomeSearchNav(),
-            const SizedBox(height: 16),
-            const HomeWeekCalendar(),
-            for (int i = 0; i < 5; i++) const HomeDentistCard(),
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          const HomeSearchNav(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  const SizedBox(height: 16),
+                  const HomeWeekCalendar(),
+                  for (int i = 0; i < 5; i++) const HomeDentistCard(),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: const HomeBottomAppBar(),
     );
