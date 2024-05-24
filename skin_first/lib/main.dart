@@ -28,25 +28,24 @@ class MyApp extends StatelessWidget {
           ),
         ),
         textTheme: TextTheme(
-          titleLarge: GoogleFonts.leagueSpartan(
-            fontSize: 48,
-            fontWeight: FontWeight.w100,
-            color: mainColor,
-          ),
-          titleMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          titleSmall: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-            color: mainColor,
-          ),
-          bodyMedium: const TextStyle(fontSize: 16),
-          bodySmall: const TextStyle(fontSize: 14),
-          displaySmall: TextStyle(
-            fontSize: 12,
-            color: mainColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+            titleLarge: GoogleFonts.leagueSpartan(
+              fontSize: 48,
+              fontWeight: FontWeight.w100,
+              color: mainColor,
+            ),
+            titleMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            titleSmall: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: mainColor,
+            ),
+            bodyMedium: const TextStyle(fontSize: 16),
+            bodySmall: const TextStyle(fontSize: 14),
+            displaySmall: TextStyle(
+              fontSize: 12,
+              color: mainColor,
+            ),
+            labelSmall: const TextStyle(fontSize: 12, color: Colors.black45)),
         useMaterial3: true,
       ),
       home: const WelcomeScreen(),

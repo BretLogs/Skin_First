@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_app_bar_widget.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
+import 'package:skin_first/presentation/home_page/widgets/home_search_nav.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,7 +16,7 @@ class HomePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const HomeAppBarWidget(),
       ),
-      body: Container(),
+      body: const HomeSearchNav(),
       bottomNavigationBar: const HomeBottomAppBar(),
     );
   }
