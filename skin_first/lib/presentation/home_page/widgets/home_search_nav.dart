@@ -92,7 +92,7 @@ class HomeSearchNav extends StatelessWidget {
                         ),
                       ],
                       hintText: 'search...',
-                      hintStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelSmall),
+                      hintStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.black45)),
                     ),
                   ),
                 ),
