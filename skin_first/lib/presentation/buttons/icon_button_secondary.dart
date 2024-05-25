@@ -11,9 +11,7 @@ class IconButtonSecondary extends StatelessWidget {
     return IconButton(
       onPressed: onPressed,
       style: const ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(
-          Color.fromARGB(255, 255, 255, 255),
-        ),
+        backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 255, 255, 255)),
       ),
       splashColor: Theme.of(context).colorScheme.primary,
       icon: Icon(icon),

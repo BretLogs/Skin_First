@@ -16,7 +16,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Skin First',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent, background: Colors.white, primary: mainColor, onPrimary: mainColor),
+        bottomAppBarTheme: const BottomAppBarTheme(
+          color: Colors.transparent,
+        ),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueAccent,
+          background: Colors.white,
+          primary: mainColor,
+          onPrimary: mainColor,
+        ),
         appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(
             color: mainColor,
@@ -25,6 +33,7 @@ class MyApp extends StatelessWidget {
         iconButtonTheme: IconButtonThemeData(
           style: ButtonStyle(
             iconColor: MaterialStatePropertyAll(mainColor),
+            backgroundColor: MaterialStateProperty.all(Colors.white),
           ),
         ),
         textTheme: TextTheme(
