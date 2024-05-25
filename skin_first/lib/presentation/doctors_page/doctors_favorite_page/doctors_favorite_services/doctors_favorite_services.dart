@@ -1,11 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:skin_first/data/services.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/doctors_favorite_list/doctors_favorite_page.dart';
-import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/doctors_favorite_list/widgets/doctors_favorite_card.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/doctors_favorite_services/widgets/doctors_favorite_services_card.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 

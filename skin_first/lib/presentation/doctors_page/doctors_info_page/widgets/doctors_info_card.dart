@@ -111,6 +111,7 @@ class DoctorsInfoCard extends StatelessWidget {
                             Icons.star,
                             color: Color(0xff2260FF),
                           ),
+                          const SizedBox(width: 4),
                           Text(
                             '5.5',
                             style: Theme.of(context).textTheme.titleSmall,
@@ -130,6 +131,7 @@ class DoctorsInfoCard extends StatelessWidget {
                             Icons.message_outlined,
                             color: Color(0xff2260FF),
                           ),
+                          const SizedBox(width: 4),
                           Text(
                             '40',
                             style: Theme.of(context).textTheme.titleSmall,

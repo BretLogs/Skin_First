@@ -53,7 +53,7 @@ class DoctorsListCard extends StatelessWidget {
                                   ),
                                   Text(
                                     'Endodontics',
-                                    style: Theme.of(context).textTheme.labelMedium,
+                                    style: Theme.of(context).textTheme.bodySmall,
                                   ),
                                 ],
                               ),

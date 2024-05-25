@@ -49,7 +49,7 @@ class DoctorsRatingCard extends StatelessWidget {
                             const SizedBox(width: 4),
                             Text(
                               'Professional Doctor',
-                              style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                              style: Theme.of(context).textTheme.labelSmall?.copyWith(
                                     color: Theme.of(context).colorScheme.primary,
                                   ),
                             ),
@@ -93,7 +93,7 @@ class DoctorsRatingCard extends StatelessWidget {
                                   ),
                                   Text(
                                     'Endodontics',
-                                    style: Theme.of(context).textTheme.labelMedium,
+                                    style: Theme.of(context).textTheme.bodySmall,
                                   ),
                                 ],
                               ),
