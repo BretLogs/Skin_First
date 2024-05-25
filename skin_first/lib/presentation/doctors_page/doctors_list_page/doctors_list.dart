@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/icon_button_primary.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_list_page/widgets/doctors_list_card.dart';
+import 'package:skin_first/presentation/doctors_page/doctors_rating_page/doctors_rating_page.dart';
 
 class DoctorsList extends StatelessWidget {
   const DoctorsList({super.key});
@@ -42,7 +43,15 @@ class DoctorsList extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
                 ElevatedButtonSecondary(onPressed: () {}, textString: 'A - Z'),
-                IconButtonPrimary(onPressed: () {}, icon: Icons.star_border_outlined),
+                IconButtonPrimary(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => const DoctorsRatingPage(),
+                          ));
+                    },
+                    icon: Icons.star_border_outlined),
                 IconButtonPrimary(onPressed: () {}, icon: Icons.favorite_border_outlined),
                 IconButtonPrimary(onPressed: () {}, icon: Icons.female_outlined),
                 IconButtonPrimary(onPressed: () {}, icon: Icons.male_outlined),
