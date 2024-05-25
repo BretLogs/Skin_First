@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
 
 class DoctorsInfoCard extends StatelessWidget {
   const DoctorsInfoCard({super.key});
@@ -13,7 +14,7 @@ class DoctorsInfoCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: Card(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+          padding: const EdgeInsets.all(12),
           child: Column(
             children: <Widget>[
               Row(
@@ -158,6 +159,35 @@ class DoctorsInfoCard extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 3),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  ElevatedButton.icon(
+                    onPressed: () {},
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
+                      foregroundColor: MaterialStatePropertyAll(Colors.white),
+                    ),
+                    icon: const Icon(Icons.calendar_month),
+                    label: Text(
+                      'Schedule',
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      const SizedBox(width: 12),
+                      IconButtonSecondary(onPressed: () {}, icon: Icons.star_border_outlined),
+                      IconButtonSecondary(onPressed: () {}, icon: Icons.favorite_border_outlined),
+                      IconButtonSecondary(onPressed: () {}, icon: Icons.female_outlined),
+                      IconButtonSecondary(onPressed: () {}, icon: Icons.male_outlined),
+                    ],
                   ),
                 ],
               )
