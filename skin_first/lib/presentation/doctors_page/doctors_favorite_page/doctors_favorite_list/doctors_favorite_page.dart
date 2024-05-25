@@ -3,6 +3,7 @@ import 'package:skin_first/data/dentist.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/doctors_favorite_list/widgets/doctors_favorite_card.dart';
+import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/doctors_favorite_services/doctors_favorite_services.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 
 class DoctorsFavoritePage extends StatelessWidget {
@@ -22,9 +23,19 @@ class DoctorsFavoritePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Expanded(child: ElevatedButtonSecondary(onPressed: () {}, textString: 'Doctors')),
+                Expanded(
+                    child: ElevatedButtonSecondary(
+                        onPressed: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const DoctorsFavoritePage()));
+                        },
+                        textString: 'Doctors')),
                 const SizedBox(width: 12),
-                Expanded(child: ElevatedButtonTertiary(onPressed: () {}, textString: 'Services'))
+                Expanded(
+                    child: ElevatedButtonTertiary(
+                        onPressed: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const DoctorsFavoriteServices()));
+                        },
+                        textString: 'Services'))
               ],
             ),
           ),
