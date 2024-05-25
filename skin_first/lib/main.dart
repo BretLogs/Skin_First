@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: MaterialStateProperty.all(Colors.white),
           ),
         ),
+        iconTheme: const IconThemeData(size: 16),
         textTheme: TextTheme(
             titleLarge: GoogleFonts.leagueSpartan(
               fontSize: 48,
