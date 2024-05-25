@@ -96,6 +96,70 @@ class DoctorsInfoCard extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      color: Colors.white,
+                      child: Row(
+                        children: <Widget>[
+                          const Icon(
+                            Icons.star,
+                            color: Color(0xff2260FF),
+                          ),
+                          Text(
+                            '5.5',
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      color: Colors.white,
+                      child: Row(
+                        children: <Widget>[
+                          const Icon(
+                            Icons.message_outlined,
+                            color: Color(0xff2260FF),
+                          ),
+                          Text(
+                            '40',
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      color: Colors.white,
+                      child: Row(
+                        children: <Widget>[
+                          const Icon(
+                            Icons.access_time,
+                            color: Color(0xff2260FF),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            'Mon-Sat / 9:00AM - 5:00PM',
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               )
             ],
           ),
