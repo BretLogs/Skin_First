@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
+import 'package:skin_first/presentation/doctors_page/doctors_info_page/doctors_info_page.dart';
 
 class DoctorsListCard extends StatelessWidget {
   const DoctorsListCard({super.key, required this.imageUrl});
@@ -68,7 +69,14 @@ class DoctorsListCard extends StatelessWidget {
                         children: <Widget>[
                           Row(
                             children: <Widget>[
-                              ElevatedButtonSecondary(onPressed: () {}, textString: 'Info'),
+                              ElevatedButtonSecondary(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (BuildContext context) => const DoctorsInfoPage()),
+                                    );
+                                  },
+                                  textString: 'Info'),
                             ],
                           ),
                           Row(
