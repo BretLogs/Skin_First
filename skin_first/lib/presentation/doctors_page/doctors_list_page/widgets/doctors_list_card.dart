@@ -71,7 +71,7 @@ class DoctorsListCard extends StatelessWidget {
                             children: <Widget>[
                               ElevatedButtonSecondary(
                                   onPressed: () {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute<dynamic>(builder: (BuildContext context) => const DoctorsInfoPage()),
                                     );

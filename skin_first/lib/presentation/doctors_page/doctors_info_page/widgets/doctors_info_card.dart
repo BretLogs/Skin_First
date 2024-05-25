@@ -85,10 +85,14 @@ class DoctorsInfoCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Dr. Angelica Krisha Cabe, M.D.',
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.primary),
+                      'Dr. Angelica Krisha Cabe, DMD',
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                      textAlign: TextAlign.center,
                     ),
                     const Text(
                       'Periodontics',
