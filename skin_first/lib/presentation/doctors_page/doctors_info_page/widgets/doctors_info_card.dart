@@ -8,8 +8,7 @@ class DoctorsInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const String imageUrl =
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww';
+    const String imageUrl = 'assets/images/model.jpg';
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: Card(
@@ -23,7 +22,7 @@ class DoctorsInfoCard extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(4, 8, 8, 8),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(100),
-                        child: Image.network(
+                        child: Image.asset(
                           imageUrl,
                           height: 150,
                           width: 150,

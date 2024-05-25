@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:skin_first/presentation/authentications_page/welcome_screen.dart';
+import 'package:skin_first/presentation/test_area/test_calendar.dart';
 
 void main() {
   runApp(const MyApp());
