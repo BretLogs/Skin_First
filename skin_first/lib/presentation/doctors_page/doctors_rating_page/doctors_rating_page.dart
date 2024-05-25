@@ -4,6 +4,7 @@ import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
 import 'package:skin_first/presentation/buttons/icon_button_primary.dart';
 import 'package:skin_first/presentation/buttons/icon_button_tertiary.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_rating_page/widgets/doctors_rating_card.dart';
+import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 
 class DoctorsRatingPage extends StatelessWidget {
   const DoctorsRatingPage({super.key});
@@ -33,25 +34,7 @@ class DoctorsRatingPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    'Sort By',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                  const SizedBox(width: 12),
-                  ElevatedButtonTertiary(onPressed: () {}, textString: 'A - Z'),
-                  IconButtonTertiary(onPressed: () {}, icon: Icons.star_border),
-                  IconButtonPrimary(onPressed: () {}, icon: Icons.favorite_border_outlined),
-                  IconButtonPrimary(onPressed: () {}, icon: Icons.female_outlined),
-                  IconButtonPrimary(onPressed: () {}, icon: Icons.male_outlined),
-                ],
-              ),
-            ),
+            const DoctorsPageNavigation(),
             for (int i = 0; i < imageNetworks.length; i++) DoctorsRatingCard(imageUrl: imageNetworks[i])
           ],
         ),
