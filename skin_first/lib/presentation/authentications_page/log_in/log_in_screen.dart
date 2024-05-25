@@ -12,12 +12,7 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Log In',
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: const Color(0xff2260FF),
-              ),
-        ),
+        title: const Text('Log In'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

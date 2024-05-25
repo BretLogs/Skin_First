@@ -19,12 +19,7 @@ class DoctorsList extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Doctors',
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: const Color(0xff2260FF),
-              ),
-        ),
+        title: const Text('Doctors'),
         centerTitle: true,
         iconTheme: const IconThemeData(
           color: Colors.black, //change your color here

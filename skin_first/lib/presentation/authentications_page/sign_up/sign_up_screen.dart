@@ -32,13 +32,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Create new Account',
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: const Color(0xff2260FF),
-                fontSize: 16,
-              ),
-        ),
+        title: const Text('Create new Account'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

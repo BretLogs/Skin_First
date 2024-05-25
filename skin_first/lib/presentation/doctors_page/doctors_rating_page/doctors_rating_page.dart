@@ -20,12 +20,7 @@ class DoctorsRatingPage extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Rating',
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: const Color(0xff2260FF),
-              ),
-        ),
+        title: const Text('Rating'),
         centerTitle: true,
         iconTheme: const IconThemeData(
           color: Colors.black, //change your color here

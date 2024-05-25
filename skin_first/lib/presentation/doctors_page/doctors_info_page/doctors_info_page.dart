@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
-import 'package:skin_first/presentation/buttons/icon_button_primary.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_info_page/widgets/doctors_info_card.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_info_page/widgets/doctors_info_titles.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
@@ -13,16 +10,7 @@ class DoctorsInfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Doctor Info',
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: const Color(0xff2260FF),
-              ),
-        ),
-        centerTitle: true,
-        iconTheme: const IconThemeData(
-          color: Colors.black, //change your color here
-        ),
+        title: const Text('Doctor Info'),
       ),
       body: const SingleChildScrollView(
         child: Column(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:skin_first/presentation/authentications_page/welcome_screen.dart';
-import 'package:skin_first/presentation/test_area/test_calendar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,9 +26,11 @@ class MyApp extends StatelessWidget {
           onPrimary: mainColor,
         ),
         appBarTheme: AppBarTheme(
+          titleTextStyle: Theme.of(context).textTheme.titleMedium?.copyWith(color: mainColor),
           iconTheme: IconThemeData(
             color: mainColor,
           ),
+          centerTitle: true,
         ),
         iconButtonTheme: IconButtonThemeData(
           style: ButtonStyle(
