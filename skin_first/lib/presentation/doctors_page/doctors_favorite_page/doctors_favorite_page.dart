@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
-import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/widgets/doctors_favorite_card.dart';
-import 'package:skin_first/presentation/doctors_page/doctors_rating_page/widgets/doctors_rating_card.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
-import 'package:skin_first/presentation/home_page/widgets/home_app_bar_widget.dart';
 
 class DoctorsFavoritePage extends StatelessWidget {
   const DoctorsFavoritePage({super.key});

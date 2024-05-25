@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
-import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
 import 'package:skin_first/presentation/buttons/icon_button_primary.dart';
-import 'package:skin_first/presentation/buttons/icon_button_tertiary.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_favorite_page/doctors_favorite_page.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_list_page/doctors_list.dart';
 import 'package:skin_first/presentation/doctors_page/doctors_rating_page/doctors_rating_page.dart';

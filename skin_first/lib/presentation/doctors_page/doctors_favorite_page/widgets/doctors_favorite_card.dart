@@ -1,10 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
-import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
-import 'package:skin_first/presentation/doctors_page/doctors_info_page/doctors_info_page.dart';
 
 class DoctorsFavoriteCard extends StatelessWidget {
   const DoctorsFavoriteCard({super.key, required this.imageUrl});
@@ -125,7 +119,7 @@ class DoctorsFavoriteCard extends StatelessWidget {
                         style: const ButtonStyle(
                           alignment: Alignment.center,
                           backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
-                          foregroundColor: MaterialStatePropertyAll(Colors.white),
+                          foregroundColor: MaterialStatePropertyAll<Color>(Colors.white),
                         ),
                         child: Text(
                           'Make an Appointment',

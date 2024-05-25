@@ -113,7 +113,7 @@ class DoctorsRatingCard extends StatelessWidget {
                                   onPressed: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (BuildContext context) => const DoctorsInfoPage()),
+                                      MaterialPageRoute<dynamic>(builder: (BuildContext context) => const DoctorsInfoPage()),
                                     );
                                   },
                                   textString: 'Info'),

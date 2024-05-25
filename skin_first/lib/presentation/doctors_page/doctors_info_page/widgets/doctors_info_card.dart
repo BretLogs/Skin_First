@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
 
 class DoctorsInfoCard extends StatelessWidget {
@@ -169,7 +168,7 @@ class DoctorsInfoCard extends StatelessWidget {
                     onPressed: () {},
                     style: const ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff2260FF)),
-                      foregroundColor: MaterialStatePropertyAll(Colors.white),
+                      foregroundColor: MaterialStatePropertyAll<Color>(Colors.white),
                     ),
                     icon: const Icon(Icons.calendar_month),
                     label: Text(
