@@ -26,4 +26,5 @@ class Services {
           'Eiusmod Lorem adipisicing ad aute proident aute. Dolor elit commodo sint voluptate aute ea aliqua. Duis aliqua culpa mollit anim qui aliqua esse proident culpa anim duis.'
     },
   };
+  final int servicesCount = services.length;
 }
