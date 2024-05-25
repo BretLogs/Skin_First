@@ -14,70 +14,89 @@ class DoctorsInfoCard extends StatelessWidget {
       child: Card(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          child: Row(
+          child: Column(
             children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(4, 8, 8, 8),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.network(
-                      imageUrl,
-                      height: 150,
-                      width: 150,
-                      fit: BoxFit.cover,
-                    ),
-                  )),
-              Expanded(
-                child: Column(
-                  children: <Widget>[
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child: Container(
-                        color: Theme.of(context).colorScheme.primary,
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            const Icon(
-                              CupertinoIcons.check_mark_circled_solid,
-                              color: Colors.white,
-                              size: 36,
-                            ),
-                            const SizedBox(width: 8),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
+                children: <Widget>[
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 8, 8, 8),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Image.network(
+                          imageUrl,
+                          height: 150,
+                          width: 150,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(100),
+                          child: Container(
+                            color: Theme.of(context).colorScheme.primary,
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
-                                Text(
-                                  '15 years',
-                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                                const Icon(
+                                  CupertinoIcons.check_mark_circled_solid,
+                                  color: Colors.white,
+                                  size: 36,
                                 ),
-                                Text(
-                                  'experience',
-                                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
+                                const SizedBox(width: 8),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      '15 years',
+                                      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                                    ),
+                                    Text(
+                                      'experience',
+                                      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
+                        const SizedBox(height: 4),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Container(
+                            color: Theme.of(context).colorScheme.primary,
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                            child: Text(
+                              'Focus: on providing exceptional dental care with a specialization in cosmetic and restorative dentistry. We are dedicated to enhancing your smile and ensuring optimal oral health through advanced techniques and personalized treatments.',
+                              maxLines: 5,
+                              overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 4),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        color: Theme.of(context).colorScheme.primary,
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                        child: Text(
-                          'Focus: on providing exceptional dental care with a specialization in cosmetic and restorative dentistry. We are dedicated to enhancing your smile and ensuring optimal oral health through advanced techniques and personalized treatments.',
-                          maxLines: 5,
-                          overflow: TextOverflow.ellipsis,
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
-                        ),
-                      ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      'Dr. Angelica Krisha Cabe, M.D.',
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Theme.of(context).colorScheme.primary),
+                    ),
+                    const Text(
+                      'Periodontics',
                     ),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),
