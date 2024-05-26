@@ -53,11 +53,7 @@ class HomePage extends StatelessWidget {
                       focusedDay: DateTime.now(),
                     ),
                   ),
-                  for (int i = 0; i < 5; i++)
-                    HomeDentistCard(
-                      imageUrl: Dentist.imgUrl[i],
-                    ),
-
+                  for (int i = 0; i < 5; i++) HomeDentistCard(imageUrl: Dentist.imgUrl[i]),
                   const SizedBox(height: 80),
                 ],
               ),

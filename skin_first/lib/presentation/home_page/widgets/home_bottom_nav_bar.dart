@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/home_page/home_page.dart';
+import 'package:skin_first/presentation/profile_page/profile_page.dart';
 
 class HomeBottomAppBar extends StatelessWidget {
   const HomeBottomAppBar({super.key});
@@ -17,7 +19,9 @@ class HomeBottomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const HomePage()));
+            },
             icon: const Icon(Icons.home_outlined),
           ),
           IconButton(
@@ -26,11 +30,13 @@ class HomeBottomAppBar extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.person_outlined),
+            icon: const Icon(Icons.calendar_month_outlined),
           ),
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.calendar_month_outlined),
+            onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePage()));
+            },
+            icon: const Icon(Icons.person_outlined),
           ),
         ],
       ),
