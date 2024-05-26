@@ -26,8 +26,12 @@ class HomePage extends StatelessWidget {
                 children: <Widget>[
                   const SizedBox(height: 12),
                   // const HomeWeekCalendar(),
-
                   const Text('Your Appointments'),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
+                    height: 1,
+                    color: const Color.fromARGB(255, 201, 201, 201),
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(12),
                     child: TableCalendar(
@@ -53,6 +57,8 @@ class HomePage extends StatelessWidget {
                     HomeDentistCard(
                       imageUrl: Dentist.imgUrl[i],
                     ),
+
+                  const SizedBox(height: 80),
                 ],
               ),
             ),

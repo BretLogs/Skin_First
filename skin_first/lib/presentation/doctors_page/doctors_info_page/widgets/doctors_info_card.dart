@@ -88,7 +88,7 @@ class DoctorsInfoCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Dr. Angelica Krisha Cabe, DMD',
+                      'Angelica Krisha Cabe, DMD',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: Theme.of(context).colorScheme.primary,
                           ),
@@ -187,10 +187,10 @@ class DoctorsInfoCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const SizedBox(width: 12),
-                      IconButtonSecondary(onPressed: () {}, icon: Icons.star_border_outlined),
-                      IconButtonSecondary(onPressed: () {}, icon: Icons.favorite_border_outlined),
-                      IconButtonSecondary(onPressed: () {}, icon: Icons.female_outlined),
-                      IconButtonSecondary(onPressed: () {}, icon: Icons.male_outlined),
+                      IconButtonSecondary(onPressed: () {}, icon: CupertinoIcons.exclamationmark),
+                      IconButtonSecondary(onPressed: () {}, icon: CupertinoIcons.question),
+                      IconButtonSecondary(onPressed: () {}, icon: Icons.star_border),
+                      IconButtonSecondary(onPressed: () {}, icon: Icons.favorite_border),
                     ],
                   ),
                 ],

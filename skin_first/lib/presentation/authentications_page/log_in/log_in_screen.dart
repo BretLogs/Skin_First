@@ -112,8 +112,18 @@ class LogInScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       // IconButton(onPressed: () {}, icon: Icon(Icons.)),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.facebook_outlined)),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.markunread)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.facebook,
+                            size: 28,
+                          )),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.mail,
+                            size: 28,
+                          )),
                     ],
                   ),
                 ],

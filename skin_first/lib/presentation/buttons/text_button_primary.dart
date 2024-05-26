@@ -12,7 +12,10 @@ class TextButtonPrimary extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         textString,
-        style: Theme.of(context).textTheme.bodySmall?.copyWith(fontStyle: FontStyle.italic, color: Colors.blueAccent),
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: Colors.blueAccent,
+              decoration: TextDecoration.underline,
+            ),
       ),
     );
   }

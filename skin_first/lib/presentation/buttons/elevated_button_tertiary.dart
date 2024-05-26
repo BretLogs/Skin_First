@@ -20,7 +20,7 @@ class ElevatedButtonTertiary extends StatelessWidget {
       ),
       child: Text(
         textString,
-        style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: const Color(0xff2260FF)),
+        style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: const Color.fromARGB(255, 255, 255, 255)),
       ),
     );
   }
