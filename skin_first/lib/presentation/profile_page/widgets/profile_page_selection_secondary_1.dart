@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProfilePageSelectionPrimary1 extends StatelessWidget {
-  const ProfilePageSelectionPrimary1({super.key, required this.onPressed, required this.icon, required this.titleText});
+class ProfilePageSelectionSecondary1 extends StatelessWidget {
+  const ProfilePageSelectionSecondary1({super.key, required this.onPressed, required this.icon, required this.titleText});
   final Function() onPressed;
   final IconData icon;
   final String titleText;

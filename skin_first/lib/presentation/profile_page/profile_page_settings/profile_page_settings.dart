@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_primary_1.dart';
+import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_secondary_1.dart';
 
 class ProfilePageSettings extends StatelessWidget {
   const ProfilePageSettings({super.key});
@@ -10,7 +10,9 @@ class ProfilePageSettings extends StatelessWidget {
       appBar: AppBar(title: const Text('Settings')),
       body: Column(
         children: <Widget>[
-          ProfilePageSelectionPrimary1(icon: Icons.lightbulb_outline, titleText: 'Notification Settings', onPressed: () {}),
+          ProfilePageSelectionSecondary1(icon: Icons.lightbulb_outline, titleText: 'Notification Settings', onPressed: () {}),
+          ProfilePageSelectionSecondary1(icon: Icons.key_outlined, titleText: 'Password Manager', onPressed: () {}),
+          ProfilePageSelectionSecondary1(icon: Icons.person_outline, titleText: 'Notification Settings', onPressed: () {}),
         ],
       ),
     );

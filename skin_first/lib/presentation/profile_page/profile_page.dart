@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/buttons/icon_button_primary.dart';
-import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
-import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_profile/profile_page_profile.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_settings/profile_page_settings.dart';
