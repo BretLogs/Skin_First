@@ -30,7 +30,7 @@ class ProfilePageSelectionSecondary1 extends StatelessWidget {
                   ),
                 ],
               ),
-              const Icon(Icons.arrow_forward_ios_outlined),
+              // const Icon(Icons.arrow_forward_ios_outlined),
             ],
           ),
         ),
