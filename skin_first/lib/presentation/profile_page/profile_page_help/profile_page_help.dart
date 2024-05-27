@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:skin_first/data/faq.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_help/widgets/profile_page_help_card.dart';
@@ -64,24 +65,15 @@ class ProfilePageHelp extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          const Expanded(
+          Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  ProfilePageHelpCard(
-                      faqName: 'In nisi amet id tempor',
-                      faqDescription:
-                          'Ut do elit consequat sunt labore et nisi dolore. Ullamco aliquip est aliqua velit non laboris non esse sint ullamco mollit laboris deserunt. Enim non quis eiusmod fugiat consequat ipsum sint et. Sit nulla commodo sint nisi exercitation. Minim dolore nostrud Lorem consectetur est aute aute.'),
-                  ProfilePageHelpCard(
-                    faqName: 'Et reprehenderit amet ',
-                    faqDescription:
-                        'Duis nostrud Lorem tempor qui exercitation. Sint consequat cillum laboris nisi fugiat officia. Minim Lorem irure dolore voluptate cupidatat pariatur nisi tempor culpa aliqua culpa duis. Dolor incididunt incididunt incididunt minim Lorem deserunt cupidatat cupidatat veniam laborum sint.',
-                  ),
-                  ProfilePageHelpCard(
-                    faqName: 'Eu nulla elit mollit ',
-                    faqDescription:
-                        'Ex in aliqua ipsum dolor fugiat dolor fugiat commodo sint qui. Est occaecat sint voluptate nulla amet nulla sit. Lorem quis irure id amet sunt sunt reprehenderit. Aliquip consequat esse reprehenderit veniam.',
-                  ),
+                  for (int i = 0; i < FAQ.faqLength; i++)
+                    ProfilePageHelpCard(
+                      faqName: FAQ.faq.toList()[i]['question']!,
+                      faqDescription: FAQ.faq.toList()[i]['answer']!,
+                    )
                 ],
               ),
             ),
