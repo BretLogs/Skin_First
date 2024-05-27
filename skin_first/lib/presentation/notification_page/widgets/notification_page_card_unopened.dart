@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class NotificationPageCard extends StatelessWidget {
-  const NotificationPageCard({super.key});
+class NotificationPageCardUnopened extends StatelessWidget {
+  const NotificationPageCardUnopened({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      color: Theme.of(context).colorScheme.primary,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           CircleAvatar(
-            backgroundColor: Theme.of(context).colorScheme.primary,
+            backgroundColor: Colors.white,
             maxRadius: 36,
-            child: const Icon(
+            child: Icon(
               Icons.calendar_month,
               size: 36,
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
           const SizedBox(width: 12),
@@ -26,11 +27,11 @@ class NotificationPageCard extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Scheduled Appointment',
-                  style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black87),
+                  style: Theme.of(context).textTheme.labelMedium,
                 ),
                 Text(
                   'Est ad commodo labore enim cupidatat Lorem dolore reprehenderit nostrud labore eu do irure.',
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                 ),
@@ -40,8 +41,8 @@ class NotificationPageCard extends StatelessWidget {
           const SizedBox(width: 24),
           Text(
             '2hrs',
-            style: Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.black54),
-          ),
+            style: Theme.of(context).textTheme.labelSmall,
+          )
         ],
       ),
     );

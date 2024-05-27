@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/notification_page/widgets/notification_page_card.dart';
+import 'package:skin_first/presentation/notification_page/widgets/notification_page_card_unopened.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
@@ -10,9 +11,7 @@ class NotificationPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Notifications')),
       body: const SingleChildScrollView(
         child: Column(
-          children: <Widget>[
-            NotificationPageCard(),
-          ],
+          children: <Widget>[NotificationPageCard(), NotificationPageCardUnopened()],
         ),
       ),
     );
