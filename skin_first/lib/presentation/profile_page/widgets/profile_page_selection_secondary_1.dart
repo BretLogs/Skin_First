@@ -19,11 +19,8 @@ class ProfilePageSelectionSecondary1 extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Icon(
-                    icon,
-                    size: 24,
-                  ),
-                  const SizedBox(width: 12),
+                  Icon(icon),
+                  const SizedBox(width: 24),
                   Text(
                     titleText,
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black87),
