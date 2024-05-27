@@ -5,6 +5,7 @@ import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_primary.dart';
+import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_secondary.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -49,15 +50,15 @@ class ProfilePage extends StatelessWidget {
                     color: Colors.black87,
                   ),
             ),
-            const ProfilePageSelectionPrimary(icon: Icons.person, titleText: 'Profile', isLogout: false),
-            const ProfilePageSelectionPrimary(icon: Icons.favorite, titleText: 'Favorite', isLogout: false),
-            const ProfilePageSelectionPrimary(icon: Icons.wallet, titleText: 'Payment Method', isLogout: false),
-            const ProfilePageSelectionPrimary(icon: Icons.lock_outline, titleText: 'Privacy Policy', isLogout: false),
-            const ProfilePageSelectionPrimary(icon: Icons.settings, titleText: 'Settings', isLogout: false),
-            const ProfilePageSelectionPrimary(icon: CupertinoIcons.question, titleText: 'Help', isLogout: false),
+            const ProfilePageSelectionPrimary(icon: Icons.person, titleText: 'Profile'),
+            const ProfilePageSelectionPrimary(icon: Icons.favorite, titleText: 'Favorite'),
+            const ProfilePageSelectionPrimary(icon: Icons.wallet, titleText: 'Payment Method'),
+            const ProfilePageSelectionPrimary(icon: Icons.lock_outline, titleText: 'Privacy Policy'),
+            const ProfilePageSelectionPrimary(icon: Icons.settings, titleText: 'Settings'),
+            const ProfilePageSelectionPrimary(icon: CupertinoIcons.question, titleText: 'Help'),
             const SizedBox(height: 40),
-            const ProfilePageSelectionPrimary(icon: Icons.logout, titleText: 'Logout', isLogout: true),
-            const ProfilePageSelectionPrimary(icon: Icons.catching_pokemon, titleText: 'Change User', isLogout: true),
+            const ProfilePageSelectionSecondary(icon: Icons.logout, titleText: 'Logout'),
+            const ProfilePageSelectionSecondary(icon: Icons.replay_circle_filled, titleText: 'Change User'),
           ],
         ),
       ),
