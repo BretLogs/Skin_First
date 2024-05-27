@@ -35,7 +35,7 @@ class LogInScreen extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     'email or mobile number',
-                    style: Theme.of(context).textTheme.labelMedium,
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black54),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -58,7 +58,7 @@ class LogInScreen extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         'password',
-                        style: Theme.of(context).textTheme.labelMedium,
+                        style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black54),
                         textAlign: TextAlign.left,
                       ),
                     ],
