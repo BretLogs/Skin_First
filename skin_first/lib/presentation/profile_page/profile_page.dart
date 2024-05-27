@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
+import 'package:skin_first/presentation/profile_page/profile_page_privacy_policy/profile_page_privacy_policy.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_profile/profile_page_profile.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_settings/profile_page_settings.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_primary.dart';
@@ -60,7 +61,7 @@ class ProfilePage extends StatelessWidget {
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.lock_outline, titleText: 'Privacy Policy'),
             ProfilePageSelectionPrimary(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePageSettings()));
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePagePrivacyPolicy()));
                 },
                 icon: Icons.settings,
                 titleText: 'Settings'),
