@@ -30,7 +30,7 @@ class NotificationPageCardUnopened extends StatelessWidget {
                   style: Theme.of(context).textTheme.labelMedium,
                 ),
                 Text(
-                  'Est ad commodo labore enim cupidatat Lorem dolore reprehenderit nostrud labore eu do irure.',
+                  'Eiusmod adipisicing aliquip nostrud eu minim sint cupidatat occaecat qui commodo occaecat nisi.',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,

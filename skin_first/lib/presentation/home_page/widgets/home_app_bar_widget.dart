@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:skin_first/presentation/notification_page/notification_page.dart';
 
 class HomeAppBarWidget extends StatelessWidget {
@@ -39,14 +40,27 @@ class HomeAppBarWidget extends StatelessWidget {
         ),
         Row(
           children: <Widget>[
-            IconButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (BuildContext context) => const NotificationPage()),
-                );
-              },
-              icon: const Icon(Icons.notifications_outlined),
+            Stack(
+              alignment: Alignment.bottomLeft,
+              children: <Widget>[
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (BuildContext context) => const NotificationPage()),
+                    );
+                  },
+                  icon: const Icon(Icons.notifications_outlined),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: CircleAvatar(
+                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    radius: 4,
+                    child: const SizedBox(),
+                  ),
+                ),
+              ],
             ),
             IconButton(
               onPressed: () {},

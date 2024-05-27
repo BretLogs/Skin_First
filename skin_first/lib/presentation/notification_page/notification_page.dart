@@ -11,7 +11,10 @@ class NotificationPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Notifications')),
       body: const SingleChildScrollView(
         child: Column(
-          children: <Widget>[NotificationPageCard(), NotificationPageCardUnopened()],
+          children: <Widget>[
+            NotificationPageCardUnopened(),
+            NotificationPageCard(),
+          ],
         ),
       ),
     );
