@@ -26,7 +26,7 @@ class ProfilePageSelectionSecondary1 extends StatelessWidget {
                   const SizedBox(width: 12),
                   Text(
                     titleText,
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(),
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black87),
                   ),
                 ],
               ),

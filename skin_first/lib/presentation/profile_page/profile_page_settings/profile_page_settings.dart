@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/profile_page/profile_page_settings/widgets/profile_page_settings_notification_selection.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_secondary_1.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
-class ProfilePageSettings extends StatelessWidget {
+class ProfilePageSettings extends StatefulWidget {
   const ProfilePageSettings({super.key});
 
+  @override
+  State<ProfilePageSettings> createState() => _ProfilePageSettingsState();
+}
+
+class _ProfilePageSettingsState extends State<ProfilePageSettings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +23,6 @@ class ProfilePageSettings extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Theme.of(context).colorScheme.primary),
-              ),
               child: Theme(
                 data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
                 child: ExpansionTile(
@@ -31,14 +34,16 @@ class ProfilePageSettings extends StatelessWidget {
                     'Service',
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black87),
                   ),
-                  children: <Widget>[
-                    ProfilePageSelectionSecondary1(icon: Icons.key_outlined, titleText: 'Password Manager', onPressed: () {}),
+                  children: const <Widget>[
+                    ProfilePageSettingsNotificationSelection(notificationName: 'General Notification'),
+                    ProfilePageSettingsNotificationSelection(notificationName: 'Sound'),
+                    ProfilePageSettingsNotificationSelection(notificationName: 'Sound Call'),
+                    ProfilePageSettingsNotificationSelection(notificationName: 'Vibrate'),
                   ],
                 ),
               ),
             ),
           ),
-
           ProfilePageSelectionSecondary1(icon: Icons.key_outlined, titleText: 'Password Manager', onPressed: () {}),
           ProfilePageSelectionSecondary1(icon: Icons.person_outline, titleText: 'Notification Settings', onPressed: () {}),
         ],
