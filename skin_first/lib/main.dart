@@ -35,9 +35,9 @@ class MyApp extends StatelessWidget {
         ),
         appBarTheme: AppBarTheme(
           titleTextStyle: Theme.of(context).textTheme.titleMedium?.copyWith(color: mainColor),
-          iconTheme: IconThemeData(
-            color: mainColor,
-          ),
+          iconTheme: IconThemeData(color: mainColor),
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.white,
           centerTitle: true,
         ),
         iconButtonTheme: IconButtonThemeData(
