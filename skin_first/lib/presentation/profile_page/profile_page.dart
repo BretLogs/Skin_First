@@ -57,8 +57,8 @@ class ProfilePage extends StatelessWidget {
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.settings, titleText: 'Settings'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: CupertinoIcons.question, titleText: 'Help'),
             const SizedBox(height: 40),
-            const ProfilePageSelectionSecondary(icon: Icons.logout, titleText: 'Logout'),
-            const ProfilePageSelectionSecondary(icon: Icons.replay_circle_filled, titleText: 'Change User')
+            ProfilePageSelectionSecondary(onPressed: () {}, icon: Icons.logout, titleText: 'Logout'),
+            ProfilePageSelectionSecondary(onPressed: () {}, icon: Icons.replay_circle_filled, titleText: 'Change User')
           ],
         ),
       ),
