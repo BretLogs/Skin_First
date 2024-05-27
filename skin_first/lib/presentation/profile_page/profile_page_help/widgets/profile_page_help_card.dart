@@ -10,7 +10,8 @@ class ProfilePageHelpCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       child: Container(
         decoration: BoxDecoration(
-          border: Border.symmetric(horizontal: BorderSide(color: Theme.of(context).colorScheme.primary)),
+          border: Border.all(color: Theme.of(context).colorScheme.primary),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Theme(
           data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
