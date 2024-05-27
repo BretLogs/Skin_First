@@ -25,6 +25,14 @@ class MyApp extends StatelessWidget {
           primary: mainColor,
           onPrimary: mainColor,
         ),
+        searchBarTheme: SearchBarThemeData(
+          textStyle: MaterialStateProperty.all(Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black54)),
+          constraints: const BoxConstraints.expand(height: 52),
+          shadowColor: const MaterialStatePropertyAll(Colors.transparent),
+          elevation: const MaterialStatePropertyAll(1),
+          padding: const MaterialStatePropertyAll(EdgeInsets.fromLTRB(8, 0, 16, 0)),
+          hintStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.black45)),
+        ),
         appBarTheme: AppBarTheme(
           titleTextStyle: Theme.of(context).textTheme.titleMedium?.copyWith(color: mainColor),
           iconTheme: IconThemeData(

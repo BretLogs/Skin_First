@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
+import 'package:skin_first/presentation/profile_page/profile_page_help/profile_page_help.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_privacy_policy/profile_page_privacy_policy.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_profile/profile_page_profile.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_settings/profile_page_settings.dart';
@@ -60,7 +61,10 @@ class ProfilePage extends StatelessWidget {
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.wallet, titleText: 'Payment Method'),
             ProfilePageSelectionPrimary(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePagePrivacyPolicy()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (BuildContext context) => const ProfilePagePrivacyPolicy()),
+                  );
                 },
                 icon: Icons.lock_outline,
                 titleText: 'Privacy Policy'),
@@ -70,7 +74,12 @@ class ProfilePage extends StatelessWidget {
                 },
                 icon: Icons.settings,
                 titleText: 'Settings'),
-            ProfilePageSelectionPrimary(onPressed: () {}, icon: CupertinoIcons.question, titleText: 'Help'),
+            ProfilePageSelectionPrimary(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePageHelp()));
+                },
+                icon: CupertinoIcons.question,
+                titleText: 'Help'),
             const SizedBox(height: 40),
             ProfilePageSelectionSecondary(onPressed: () {}, icon: Icons.logout, titleText: 'Logout'),
             ProfilePageSelectionSecondary(onPressed: () {}, icon: Icons.replay_circle_filled, titleText: 'Change User')

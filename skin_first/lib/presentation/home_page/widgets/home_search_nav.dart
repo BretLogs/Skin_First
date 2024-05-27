@@ -69,11 +69,6 @@ class HomeSearchNav extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(24, 0, 12, 0),
                     child: SearchBar(
-                      textStyle: MaterialStateProperty.all(Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black54)),
-                      constraints: const BoxConstraints.expand(height: 52),
-                      shadowColor: const MaterialStatePropertyAll(Colors.transparent),
-                      elevation: const MaterialStatePropertyAll(1),
-                      padding: const MaterialStatePropertyAll(EdgeInsets.fromLTRB(8, 0, 16, 0)),
                       leading: ClipRRect(
                         borderRadius: const BorderRadius.all(Radius.circular(100)),
                         child: Container(
@@ -92,7 +87,6 @@ class HomeSearchNav extends StatelessWidget {
                         ),
                       ],
                       hintText: 'search...',
-                      hintStyle: MaterialStatePropertyAll(Theme.of(context).textTheme.labelSmall?.copyWith(color: Colors.black45)),
                     ),
                   ),
                 ),
