@@ -11,6 +11,7 @@ class ProfilePageHelp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const bool toggle = true;
     return Scaffold(
       appBar: AppBar(title: const Text('Help Center')),
       body: Column(
@@ -37,17 +38,29 @@ class ProfilePageHelp extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Expanded(child: ElevatedButtonSecondary(onPressed: () {}, textString: 'FAQ')),
-                const SizedBox(width: 12),
-                Expanded(child: ElevatedButtonTertiary(onPressed: () {}, textString: 'Contact Us'))
-              ],
-            ),
-          ),
+          toggle
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Expanded(child: ElevatedButtonSecondary(onPressed: () {}, textString: 'FAQ')),
+                      const SizedBox(width: 12),
+                      Expanded(child: ElevatedButtonTertiary(onPressed: () {}, textString: 'Contact Us'))
+                    ],
+                  ),
+                )
+              : Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Expanded(child: ElevatedButtonTertiary(onPressed: () {}, textString: 'FAQ')),
+                      const SizedBox(width: 12),
+                      Expanded(child: ElevatedButtonSecondary(onPressed: () {}, textString: 'Contact Us'))
+                    ],
+                  ),
+                ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
