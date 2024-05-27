@@ -18,6 +18,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
       firstDate: DateTime(2017, 9, 7, 17, 30),
       lastDate: DateTime.now(),
       initialDate: DateTime.now(),
+      builder: (BuildContext context, Widget? child) {
+        return Theme(
+          data: ThemeData.light().copyWith(),
+          child: child!,
+        );
+      },
     );
     if (picked != null) {
       setState(() {
@@ -47,7 +53,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: <Widget>[
                   Text(
                     'username',
-                    style: Theme.of(context).textTheme.labelMedium,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -72,7 +78,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: <Widget>[
                   Text(
                     'email or mobile number',
-                    style: Theme.of(context).textTheme.labelMedium,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -95,7 +101,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: <Widget>[
                       Text(
                         'date of birth',
-                        style: Theme.of(context).textTheme.labelMedium,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                       TextField(
                         controller: _dateController,
@@ -124,7 +130,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: <Widget>[
                   Text(
                     'password',
-                    style: Theme.of(context).textTheme.labelMedium,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -150,7 +156,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: <Widget>[
                   Text(
                     're-enter password',
-                    style: Theme.of(context).textTheme.labelMedium,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                   TextField(
                     decoration: InputDecoration(

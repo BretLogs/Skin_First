@@ -4,6 +4,7 @@ import 'package:skin_first/presentation/buttons/icon_button_primary.dart';
 import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
+import 'package:skin_first/presentation/profile_page/profile_page_profile/profile_page_profile.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_primary.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_secondary.dart';
 
@@ -50,7 +51,12 @@ class ProfilePage extends StatelessWidget {
                     color: Colors.black87,
                   ),
             ),
-            ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.person, titleText: 'Profile'),
+            ProfilePageSelectionPrimary(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePageProfile()));
+                },
+                icon: Icons.person,
+                titleText: 'Profile'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.favorite, titleText: 'Favorite'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.wallet, titleText: 'Payment Method'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.lock_outline, titleText: 'Privacy Policy'),

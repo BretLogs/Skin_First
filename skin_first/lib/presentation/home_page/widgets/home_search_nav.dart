@@ -31,7 +31,7 @@ class HomeSearchNav extends StatelessWidget {
                   children: <Widget>[
                     IconButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) => const DoctorsList()),
                         );

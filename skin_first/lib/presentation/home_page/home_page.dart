@@ -25,7 +25,6 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   const SizedBox(height: 12),
-                  // const HomeWeekCalendar(),
                   const Text('Your Appointments'),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 16),
