@@ -66,6 +66,7 @@ class MyApp extends StatelessWidget {
               fontSize: 12,
               color: mainColor,
             ),
+            labelLarge: const TextStyle(fontSize: 20, color: Colors.white),
             labelMedium: const TextStyle(fontSize: 16, color: Colors.white),
             labelSmall: const TextStyle(fontSize: 12, color: Colors.white)),
         useMaterial3: true,
