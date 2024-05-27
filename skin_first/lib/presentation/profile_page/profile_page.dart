@@ -5,6 +5,7 @@ import 'package:skin_first/presentation/buttons/icon_button_secondary.dart';
 import 'package:skin_first/presentation/doctors_page/widgets/doctors_page_navigation.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_profile/profile_page_profile.dart';
+import 'package:skin_first/presentation/profile_page/profile_page_settings/profile_page_settings.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_primary.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_secondary.dart';
 
@@ -60,7 +61,12 @@ class ProfilePage extends StatelessWidget {
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.favorite, titleText: 'Favorite'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.wallet, titleText: 'Payment Method'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.lock_outline, titleText: 'Privacy Policy'),
-            ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.settings, titleText: 'Settings'),
+            ProfilePageSelectionPrimary(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePageSettings()));
+                },
+                icon: Icons.settings,
+                titleText: 'Settings'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: CupertinoIcons.question, titleText: 'Help'),
             const SizedBox(height: 40),
             ProfilePageSelectionSecondary(onPressed: () {}, icon: Icons.logout, titleText: 'Logout'),
