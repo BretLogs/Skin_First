@@ -58,10 +58,15 @@ class ProfilePage extends StatelessWidget {
                 titleText: 'Profile'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.favorite, titleText: 'Favorite'),
             ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.wallet, titleText: 'Payment Method'),
-            ProfilePageSelectionPrimary(onPressed: () {}, icon: Icons.lock_outline, titleText: 'Privacy Policy'),
             ProfilePageSelectionPrimary(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePagePrivacyPolicy()));
+                },
+                icon: Icons.lock_outline,
+                titleText: 'Privacy Policy'),
+            ProfilePageSelectionPrimary(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePageSettings()));
                 },
                 icon: Icons.settings,
                 titleText: 'Settings'),
