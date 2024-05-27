@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/profile_page/profile_page_password_manager/profile_page_password_manager.dart';
 import 'package:skin_first/presentation/profile_page/profile_page_settings/widgets/profile_page_settings_notification_selection.dart';
 import 'package:skin_first/presentation/profile_page/widgets/profile_page_selection_secondary_1.dart';
 
@@ -46,8 +47,13 @@ class _ProfilePageSettingsState extends State<ProfilePageSettings> {
                 ),
               ),
             ),
-            ProfilePageSelectionSecondary1(icon: Icons.key_outlined, titleText: 'Password Manager', onPressed: () {}),
-            ProfilePageSelectionSecondary1(icon: Icons.person_outline, titleText: 'Notification Settings', onPressed: () {}),
+            ProfilePageSelectionSecondary1(
+                icon: Icons.key_outlined,
+                titleText: 'Password Manager',
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ProfilePagePasswordManager()));
+                }),
+            ProfilePageSelectionSecondary1(icon: Icons.person_outline, titleText: 'Delete Account', onPressed: () {}),
           ],
         ),
       ),
