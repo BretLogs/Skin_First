@@ -58,7 +58,7 @@ class ProfilePage extends StatelessWidget {
             const ProfilePageSelectionPrimary(icon: CupertinoIcons.question, titleText: 'Help'),
             const SizedBox(height: 40),
             const ProfilePageSelectionSecondary(icon: Icons.logout, titleText: 'Logout'),
-            const ProfilePageSelectionSecondary(icon: Icons.replay_circle_filled, titleText: 'Change User'),
+            const ProfilePageSelectionSecondary(icon: Icons.replay_circle_filled, titleText: 'Change User')
           ],
         ),
       ),
