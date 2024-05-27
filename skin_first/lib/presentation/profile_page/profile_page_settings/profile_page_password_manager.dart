@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skin_first/presentation/buttons/elevated_button_secondary.dart';
 import 'package:skin_first/presentation/buttons/elevated_button_tertiary.dart';
-import 'package:skin_first/presentation/buttons/elevated_buttons_main.dart';
 import 'package:skin_first/presentation/buttons/text_button_primary.dart';
 
 class ProfilePagePasswordManager extends StatelessWidget {
