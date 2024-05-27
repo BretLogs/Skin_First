@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProfilePageSelectionPrimary extends StatelessWidget {
-  const ProfilePageSelectionPrimary({super.key, required this.icon, required this.titleText});
+  const ProfilePageSelectionPrimary({super.key, required this.icon, required this.titleText, required this.onPressed});
+  final Function() onPressed;
   final IconData icon;
   final String titleText;
 
@@ -18,7 +19,7 @@ class ProfilePageSelectionPrimary extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Row(
