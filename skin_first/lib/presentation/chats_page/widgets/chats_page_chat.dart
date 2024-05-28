@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/chats_page/chats_page_message.dart';
 
 class ChatsPageChat extends StatelessWidget {
   const ChatsPageChat({super.key});
@@ -6,7 +7,9 @@ class ChatsPageChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const ChatsPageMessage()));
+      },
       splashColor: Theme.of(context).colorScheme.primary,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
