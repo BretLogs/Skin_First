@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:skin_first/presentation/chats_page/chats_page.dart';
 import 'package:skin_first/presentation/home_page/home_page.dart';
 import 'package:skin_first/presentation/profile_page/profile_page.dart';
 
@@ -25,7 +26,9 @@ class HomeBottomAppBar extends StatelessWidget {
             icon: const Icon(Icons.home_outlined),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => const ChatsPage()));
+            },
             icon: const Icon(Icons.message_outlined),
           ),
           IconButton(
