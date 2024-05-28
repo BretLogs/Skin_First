@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:skin_first/data/dentist.dart';
 import 'package:skin_first/presentation/chats_page/widgets/chats_page_chat.dart';
+import 'package:skin_first/presentation/chats_page/widgets/chats_page_chat_unopened.dart';
 import 'package:skin_first/presentation/home_page/widgets/home_bottom_nav_bar.dart';
 
 class ChatsPage extends StatelessWidget {
@@ -17,7 +17,17 @@ class ChatsPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             ChatsPageChat(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
             ChatsPageChat(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
+            ChatsPageChatUnopened(),
           ],
         ),
       ),
