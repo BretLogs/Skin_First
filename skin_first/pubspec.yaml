@@ -64,6 +64,11 @@ flutter:
     - assets/images/splash_icon.png
     - assets/images/profile_pic.jpg
     - assets/images/model.jpg
+    - assets/images/dentist_placeholder/1.jpg
+    - assets/images/dentist_placeholder/2.jpg
+    - assets/images/dentist_placeholder/3.jpg
+    - assets/images/dentist_placeholder/4.jpg
+    - assets/images/dentist_placeholder/5.jpg
 
   #       style: italic
   # - family: Trajan Pro

@@ -24,7 +24,7 @@ class DoctorsRatingCard extends StatelessWidget {
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(100),
-                    child: Image.network(
+                    child: Image.asset(
                       imageUrl,
                       height: 100,
                       width: 100,
